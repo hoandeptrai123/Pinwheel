@@ -1,82 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinwheel</title>
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="container">
-            <!-- logo -->
-            <div class="logo">
-                <a href="index.html">
-                <img src="./img/logo.png" alt="">
-            </a>
-            </div>
-            <div>
-                <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Features</li>
-                <li>How it works</li>
-                <li>Pages</li>
-                <li>Contact</li>
-                <button>Sign up now</button>
-            </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- Banner -->
-    <section>
-        <div class="container">
-            <div class="banner_content">
-                <div class="banner_left">
-                    <h1>Scale design & dev operations with Avocode Enterprise</h1>
-                <p>A fully integrated suite of authentication & authoriz products, Stytch’s platform removes the headache of.
-
-</p>
-                 <button>Download The Theme</button>
-                </div>
-                <div class="banner_right">
-                    <img src="./img/banner-img.png" alt="">
-
-                </div>
-
-
-            </div>
-
-        </div>
-        <img src="./img/banner-shape.png" alt="">
-    </section>
-    <!-- Key feature -->
-    <section>
-        <div class="container">
-            
-            <div class="feature_content">
-                <div class="title">
-                    <h1>The Highlighting Part Of Our Solution</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin .</p>
-                </div>
-
-            </div>
-
-        </div>
-        <img src="./img/feature-shape.png" alt="">
-    </section>
-    <!-- Services -->
-    <section></section>
-
-
-
-    <!-- Reviews -->
-    <section></section>
-    <!-- call to action -->
-    <section></section>
-    <!-- Footer -->
-    <footer></footer>
-    
-</body>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pinwheel landing page rebuilt with pure HTML5 + Tailwind CSS" />
+    <title>Pinwheel · Tailwind Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Merriweather:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./public/assets/images/favicon.png" />
+    <link rel="stylesheet" href="./public/css/main.css" />
+  </head>
+  <body class="min-h-screen bg-[#F7F9FF] text-charcoal">
+    <noscript>
+      <div class="bg-primary py-3 text-center text-sm text-white">
+        Bạn cần bật JavaScript để tải các component của trang.
+      </div>
+    </noscript>
+    <div id="app" class="overflow-x-hidden">
+      <div data-component="navbar"></div>
+      <main class="space-y-0">
+        <div data-component="hero"></div>
+        <div data-component="features"></div>
+        <div data-component="services"></div>
+        <div data-component="reviews"></div>
+        <div data-component="cta"></div>
+      </main>
+      <div data-component="footer"></div>
+    </div>
+    <script type="module" src="./public/js/app.js"></script>
+  </body>
 </html>
