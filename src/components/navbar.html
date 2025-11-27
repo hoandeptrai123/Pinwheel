@@ -1,0 +1,64 @@
+<header class="sticky top-0 z-50 bg-[#F7F9FF]/95 shadow-sm shadow-black/5 backdrop-blur">
+  <nav class="container flex items-center justify-between gap-6 py-5">
+    <a href="#" class="shrink-0">
+      <img src="./public/assets/images/logo.svg" alt="Pinwheel logo" class="h-8 w-auto" />
+    </a>
+
+    <button
+      type="button"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-charcoal lg:hidden"
+      aria-label="Open menu"
+      data-nav-toggle
+    >
+      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M10 18h10" />
+      </svg>
+    </button>
+
+    <div
+      class="fixed inset-x-0 top-[72px] hidden flex-col bg-[#F7F9FF] px-6 pb-8 pt-4 shadow-2xl shadow-black/10 lg:static lg:flex lg:flex-row lg:items-center lg:bg-transparent lg:p-0 lg:shadow-none"
+      data-nav-menu
+    >
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">How It Works</a>
+        <div class="group relative">
+          <button
+            class="nav-link inline-flex items-center gap-1 text-left"
+            type="button"
+            data-nav-dropdown
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Pages
+            <svg class="h-4 w-4 transition duration-200 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.044l3.71-3.814a.75.75 0 0 1 1.08 1.04l-4.24 4.36a.75.75 0 0 1-1.08 0l-4.25-4.36a.75.75 0 0 1 .02-1.06z" />
+            </svg>
+          </button>
+          <div
+            class="hidden rounded-2xl bg-white p-4 shadow-2xl shadow-black/10 transition duration-200 lg:invisible lg:absolute lg:left-0 lg:top-full lg:mt-3 lg:block lg:w-60 lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"
+            data-nav-dropdown-menu
+          >
+            <ul class="space-y-2 text-sm">
+              <li><a class="footer-link" href="#">Career</a></li>
+              <li><a class="footer-link" href="#">Career Single</a></li>
+              <li><a class="footer-link" href="#">Integrations</a></li>
+              <li><a class="footer-link" href="#">Integration Single</a></li>
+              <li><a class="footer-link" href="#">Pricing</a></li>
+              <li><a class="footer-link" href="#">Changelogs</a></li>
+              <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <a class="nav-link" href="#">Contact</a>
+      </div>
+      <div class="mt-6 lg:mt-0 lg:ml-8">
+        <a class="btn btn-white mt-8" href="#">Sign Up Now</a>
+      </div>
+    </div>
+  </nav>
+</header>
+

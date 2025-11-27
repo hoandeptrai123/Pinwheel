@@ -1,0 +1,28 @@
+{
+  "name": "pinwheel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/main.css --watch",
+    "build": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/main.css --minify",
+    "preview": "npx http-server ./ -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoandeptrai123/Pinwheel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hoandeptrai123/Pinwheel/issues"
+  },
+  "homepage": "https://github.com/hoandeptrai123/Pinwheel#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
+  }
+}

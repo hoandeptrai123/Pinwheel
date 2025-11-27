@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#F7F9FF] font-poppins text-charcoal antialiased leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-merriweather text-charcoal leading-tight;
+  }
+
+  p {
+    @apply text-base text-[#4B5563];
+  }
+
+  section {
+    @apply py-16 lg:py-[120px];
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full border border-transparent px-8 py-3 text-sm font-medium tracking-tight text-charcoal transition-all duration-300;
+  }
+
+  .btn-white {
+    @apply bg-white text-charcoal shadow-brand hover:shadow-lg;
+  }
+
+  .btn-primary {
+    @apply text-white shadow-cta;
+    background-image: linear-gradient(184.78deg, #fa709a 7.64%, #fee140 120.07%);
+  }
+
+  .btn-outline {
+    @apply border border-primary text-charcoal;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-charcoal/70 transition-colors duration-200 hover:text-primary;
+  }
+
+  .nav-link.active {
+    @apply text-primary;
+  }
+
+  .feature-card {
+    @apply flex h-full flex-col justify-between rounded-2xl bg-white/90 p-6 shadow-xl shadow-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-black/10;
+  }
+
+  .section-heading {
+    @apply text-3xl font-merriweather leading-tight text-charcoal md:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-4 text-base text-[#6B7280];
+  }
+
+  .tab-nav {
+    @apply flex flex-col gap-3;
+  }
+
+  .tab-button {
+    @apply flex items-center rounded-full border border-transparent px-4 py-3 text-left text-sm font-medium text-charcoal/70 transition-all duration-300 hover:border-primary/40 hover:text-primary;
+  }
+
+  .tab-button.active {
+    @apply border border-border bg-white text-primary shadow-brand;
+  }
+
+  .review-card {
+    @apply flex h-full flex-col rounded-3xl bg-white px-10 pb-12 pt-16 text-center shadow-xl shadow-black/5 transition duration-300;
+  }
+
+  .review-avatar {
+    @apply mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-cta-gradient p-1 shadow-lg;
+  }
+
+  .footer-link {
+    @apply text-sm text-charcoal/70 transition hover:text-primary;
+  }
+}
+
