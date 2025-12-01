@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build:prod",
   "outputDirectory": ".",
   "devCommand": "npm run dev",
   "installCommand": "npm install"

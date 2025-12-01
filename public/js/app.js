@@ -1,27 +1,3 @@
-const COMPONENT_ATTRIBUTE = 'data-component';
-
-const loadComponents = async () => {
-  const placeholders = Array.from(document.querySelectorAll(`[${COMPONENT_ATTRIBUTE}]`));
-  const loaders = placeholders.map(async (placeholder) => {
-    const name = placeholder.getAttribute(COMPONENT_ATTRIBUTE);
-    try {
-      const response = await fetch(`./src/components/${name}.html`);
-      if (!response.ok) {
-        throw new Error(`Không thể load component ${name}`);
-      }
-      const markup = await response.text();
-      placeholder.innerHTML = markup;
-      placeholder.removeAttribute(COMPONENT_ATTRIBUTE);
-      placeholder.setAttribute('data-component-name', name);
-    } catch (error) {
-      console.error(error);
-      placeholder.innerHTML = `<section class="container py-10 text-center text-red-500">Không thể tải section ${name}</section>`;
-    }
-  });
-
-  await Promise.all(loaders);
-};
-
 const initNavigation = () => {
   const toggle = document.querySelector('[data-nav-toggle]');
   const menu = document.querySelector('[data-nav-menu]');
@@ -171,8 +147,7 @@ const injectYear = () => {
   }
 };
 
-const boot = async () => {
-  await loadComponents();
+const boot = () => {
   initNavigation();
   initTabs();
   initVideoPlayer();
@@ -182,4 +157,3 @@ const boot = async () => {
 };
 
 boot();
-
